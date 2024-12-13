@@ -4,25 +4,6 @@
   
   
   <entry>
-    <title>线性离子阱中的时间晶体</title>
-    <link href="/2024/12/13/timecrystals/"/>
-    <url>/2024/12/13/timecrystals/</url>
-    
-    <content type="html"><![CDATA[<p>我们考虑一个被限制在线性离子阱中的 <spanclass="math inline">\(^{40}\mathrm{Ca}^{+}\)</span>离子，该系统受到强度为 <span class="math inline">\(\varepsilon\)</span>的外部场驱动。在这一装置中，我们利用三束波长为 729 nm的驻波激光模拟了多种耗散和增益过程。每束激光具有不同的作用：一束以速率<span class="math inline">\(\kappa\)</span> 引发线性阻尼，另一束以速率<span class="math inline">\(\lambda\)</span>引入非线性阻尼，第三束则以速率 <span class="math inline">\(g\)</span>产生线性增益。</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Physics</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>2024年年度10选照片</title>
     <link href="/2024/12/13/photoin2024/"/>
     <url>/2024/12/13/photoin2024/</url>
@@ -53,6 +34,25 @@
     <tags>
       
       <tag>Travel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>线性离子阱中的时间晶体</title>
+    <link href="/2024/12/13/timecrystals/"/>
+    <url>/2024/12/13/timecrystals/</url>
+    
+    <content type="html"><![CDATA[<p>我们考虑一个被限制在线性离子阱中的 <spanclass="math inline">\(^{40}\mathrm{Ca}^{+}\)</span>离子，该系统受到强度为 <span class="math inline">\(\varepsilon\)</span>的外部场驱动。在这一装置中，我们利用三束波长为 729 nm的驻波激光模拟了多种耗散和增益过程。每束激光具有不同的作用：一束以速率<span class="math inline">\(\kappa\)</span> 引发线性阻尼，另一束以速率<span class="math inline">\(\lambda\)</span>引入非线性阻尼，第三束则以速率 <span class="math inline">\(g\)</span>产生线性增益。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Physics</tag>
       
     </tags>
     
