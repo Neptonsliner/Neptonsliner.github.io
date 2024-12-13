@@ -123,14 +123,15 @@ option = {
                 normal: {
                     formatter: '{b}',
                     position: 'right',
-                    show: true
+                    show: false
                 }
             },
             itemStyle: {
                 normal: {
                     color: '#D2691E',
-                    shadowBlur: 5,
-                    shadowColor: '#333'
+                    shadowBlur: 0,
+                    shadowColor: '#333',
+                    symbolSize: 1
                 }
             },
             zlevel: 1
