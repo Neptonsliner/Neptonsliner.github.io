@@ -21,20 +21,22 @@
   
     <meta name="description" content="时间晶体是一种新型的物质相，其特征是自发打破时间平移对称性。尽管时间晶体的实验验证仍然有限，本文通过详细的数值模拟，提出了在离子阱系统中实现时间晶体的理论研究。我们的模型假设三束激光与钙离子阱相互作用，分别引入线性阻尼、线性增益和非线性阻尼。这种装置使系统能够以一个远长于振动周期的时间尺度进行稳定的耗散演化，从而实现可控的耗散动力学。我们的研究结果表明，在特定条件下，离子阱系统可以表现出离散时间平">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性离子阱中的时间晶体">
+<meta property="og:title" content="线性离子阱中的时间晶体 (1)">
 <meta property="og:url" content="http://example.com/2024/12/13/timecrystals/index.html">
 <meta property="og:site_name" content="Neptons_02的Blog">
 <meta property="og:description" content="时间晶体是一种新型的物质相，其特征是自发打破时间平移对称性。尽管时间晶体的实验验证仍然有限，本文通过详细的数值模拟，提出了在离子阱系统中实现时间晶体的理论研究。我们的模型假设三束激光与钙离子阱相互作用，分别引入线性阻尼、线性增益和非线性阻尼。这种装置使系统能够以一个远长于振动周期的时间尺度进行稳定的耗散演化，从而实现可控的耗散动力学。我们的研究结果表明，在特定条件下，离子阱系统可以表现出离散时间平">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/timecrystals/FIG1.png">
 <meta property="article:published_time" content="2024-12-12T17:40:50.000Z">
-<meta property="article:modified_time" content="2024-12-13T08:00:22.060Z">
+<meta property="article:modified_time" content="2024-12-14T06:26:12.384Z">
 <meta property="article:author" content="Neptons_02">
 <meta property="article:tag" content="Physics">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/timecrystals/FIG1.png">
   
   
   
-  <title>线性离子阱中的时间晶体 - Neptons_02的Blog</title>
+  <title>线性离子阱中的时间晶体 (1) - Neptons_02的Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -176,7 +178,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="线性离子阱中的时间晶体"></span>
+            <span id="subtitle" data-typed-text="线性离子阱中的时间晶体 (1)"></span>
           
         </div>
 
@@ -199,7 +201,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          121 字
+          1.4k 字
         
       </span>
     
@@ -210,7 +212,7 @@
         
         
         
-          2 分钟
+          12 分钟
         
       </span>
     
@@ -247,20 +249,188 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">线性离子阱中的时间晶体</h1>
+            <h1 id="seo-header">线性离子阱中的时间晶体 (1)</h1>
             
             
               <div class="markdown-body">
                 
-                <p>我们考虑一个被限制在线性离子阱中的 <span
-class="math inline">\(^{40}\mathrm{Ca}^{+}\)</span>
-离子，该系统受到强度为 <span class="math inline">\(\varepsilon\)</span>
-的外部场驱动。在这一装置中，我们利用三束波长为 729 nm
-的驻波激光模拟了多种耗散和增益过程。每束激光具有不同的作用：一束以速率
-<span class="math inline">\(\kappa\)</span> 引发线性阻尼，另一束以速率
-<span class="math inline">\(\lambda\)</span>
-引入非线性阻尼，第三束则以速率 <span class="math inline">\(g\)</span>
-产生线性增益。</p>
+                <h1
+id="模型的建立与有效哈密顿量的导出">模型的建立与有效哈密顿量的导出</h1>
+<p>我们考虑一个被限制在线性离子阱中的<span
+class="math inline">\(^{40}\mathrm{Ca}^{+}\)</span>离子，该系统受到强度为<span
+class="math inline">\(\varepsilon\)</span>的外部场驱动。在这一装置中，我们利用三束波长为729
+nm的驻波激光模拟了多种耗散和增益过程。每束激光具有不同的作用：一束以速率<span
+class="math inline">\(\kappa\)</span>引发线性阻尼，另一束以速率<span
+class="math inline">\(\lambda\)</span>引入非线性阻尼，第三束则以速率<span
+class="math inline">\(g\)</span>产生线性增益。</p>
+<p>与本实验相关的能级结构如下图所示。<span
+class="math inline">\(^{40}\mathrm{Ca}^{+}\)</span> 离子的 <span
+class="math inline">\(4\text{S}_{1/2}\)</span> 态是其基态，而 <span
+class="math inline">\(3\text{D}_{5/2}\)</span> 态可以通过 729 nm
+激光束选择性地激发。通过调整三束激光的频率构建模型，其中两束激光分别失谐
+<span class="math inline">\(\pm \omega _e\)</span>，第三束激光失谐 $-2_e
+$，其中 $_e $ 为外加电场的频率。从 <span
+class="math inline">\(4\text{P}_{3/2}\)</span> 态到 <span
+class="math inline">\(4\text{S}_{1/2}\)</span>
+态的跃迁以自发辐射为特征，其速率为 <span
+class="math inline">\(\gamma\)</span>。此外，我们引入了一束 854 nm
+的淬灭激光，用于快速清空 <span
+class="math inline">\(4\text{P}_{3/2}\)</span>
+态，将离子驱回基态，从而有效地最小化泄漏和去相干效应。</p>
+<p><img src="/img/timecrystals/FIG1.png" srcset="/img/loading.gif" lazyload /></p>
+<p>系统的哈密顿量为： <span class="math display">\[\begin{align}
+    \begin{aligned}
+        H = &amp; \omega_1 \left | 1  \right \rangle \left \langle 1
+\right | + \omega_2 \left | 2  \right \rangle \left \langle 2 \right | +
+\omega_k a^\dagger a + \varepsilon(a \mathrm{e}^{-i \omega_e t} +
+h.c.)\\
+        &amp; + \sum_{m = 1}^3 \frac{\Omega _m}{2}\mathrm{sin}[\eta(a +
+a^\dagger) + \phi_m]\left(\sigma_+\mathrm{e}^{-i \omega_L^m t} + h.c.
+\right )\\
+        &amp; + \frac{\Omega_e}{2} \left( \left | 2  \right \rangle
+\left \langle 1 \right | \mathrm{e}^{-i \omega_L^e t} + h.c. \right ),
+    \end{aligned}
+\end{align}\]</span> 其中，参数<span
+class="math inline">\(\omega_1\)</span>和<span
+class="math inline">\(\omega_2\)</span>分别表示粒子处于量子态<span
+class="math inline">\(\left| 1 \right\rangle\)</span>和<span
+class="math inline">\(\left| 2
+\right\rangle\)</span>时的能量本征值。<span
+class="math inline">\(\omega_k\)</span>表示与离子阱腔模相关的轴向振动频率。符号<span
+class="math inline">\(\varepsilon\)</span>表示外加电场的幅值。<span
+class="math inline">\(\Omega_m\)</span>、<span
+class="math inline">\(\phi_m\)</span>和<span
+class="math inline">\(\omega_L^m\)</span>分别表示三束729
+nm激光的拉比频率、相位偏移和频率。此外，<span
+class="math inline">\(\Omega_e\)</span>和<span
+class="math inline">\(\omega_L^m\)</span>表示854
+nm激光的拉比频率和激光频率。<span
+class="math inline">\(\eta\)</span>是<span
+class="math inline">\(^{40}\mathrm{Ca}^+\)</span>离子的Lamb-Dicke参数。算符<span
+class="math inline">\(\sigma_+\)</span>和<span
+class="math inline">\(\sigma_-\)</span>定义为<span
+class="math inline">\(\sigma_+ = \left| 1 \right\rangle \left\langle 0
+\right|\)</span>和<span class="math inline">\(\sigma_- = \left| 0
+\right\rangle \left\langle 1
+\right|\)</span>。然后，通过应用旋转算符，可以将哈密顿量转换到旋转参考系：
+<span class="math display">\[\begin{align}
+    \begin{aligned}
+        \widetilde{H} = &amp;-\Delta a^\dagger a + \varepsilon (a +
+a^\dagger)\\
+        &amp;+ \sum_{m = 1}^3 \frac{\Omega
+_m}{2}\mathrm{sin}[\eta(a\mathrm{e}^{-i \omega_e t} + a^\dagger
+\mathrm{e}^{i \omega_e t})
+        + \phi_m]\left ( \sigma_+\mathrm{e}^{-i \delta_L^m  t} + h.c.
+\right ) \\
+        &amp; +\frac{\Omega _e}{2}\left [ \left| 2 \right\rangle
+\left\langle 1 \right| \mathrm{e}^{-i (\omega_L^e +\omega_1 -
+\omega_2)t}
+        + h.c. \right ],
+    \end{aligned}
+\end{align}\]</span> 其中，<span class="math inline">\(\Delta = \omega_e
+- \omega_k\)</span>，<span class="math inline">\(\delta_L^m = \omega_L^m
+- \omega_1\)</span>。在实验中，我们可以设置<span
+class="math inline">\(\omega_L^e = \omega_2 -
+\omega_1\)</span>，由此得到： <span class="math display">\[\begin{align}
+    \widetilde{H} = H_a + H_0 + \frac{\Omega _e}{2}\left [ \left| 2
+\right\rangle \left\langle 1 \right|  + \left| 1 \right\rangle
+\left\langle 2 \right| \right ].
+\end{align}\]</span></p>
+<p>离子阱中<span
+class="math inline">\(^{40}\mathrm{Ca}^{+}\)</span>的动力学遵循马尔可夫过程。因此，密度算符<span
+class="math inline">\(\rho\)</span>的时间演化由Lindblad主方程（<span
+class="math inline">\(\hbar = 1\)</span>）描述： <span
+class="math display">\[\begin{align}
+    \dot{\rho} = -i\left[\widetilde{H},\rho \right] +  L \rho L^\dagger
+-\frac{1}{2}\left(L^\dagger L \rho + \rho L^\dagger L \right),
+\end{align}\]</span> 其中，<span class="math inline">\(L = \sqrt{\gamma}
+\left| 0 \right \rangle \left \langle 2 \right|\)</span>表示从<span
+class="math inline">\(\left| 2 \right \rangle\)</span>到<span
+class="math inline">\(\left| 0 \right\rangle\)</span>的衰变路径，<span
+class="math inline">\(\gamma =
+22.4\mathrm{MHz}\)</span>为衰变速率。在此，我们旨在研究粒子的内态<span
+class="math inline">\(\left| 0 \right\rangle\)</span>和<span
+class="math inline">\(\left| 1 \right
+\rangle\)</span>。因此，可以通过绝热消去态<span
+class="math inline">\(\left| 2 \right\rangle\)</span>，得到： <span
+class="math display">\[\begin{align}
+    \begin{aligned}
+        H_{\mathrm{eff}}^{(1)} = H_a + H_0 ,\quad L_{\mathrm{eff}}^{(1)}
+=i \sqrt{\Gamma } \left| 0 \right\rangle \left\langle 1 \right|, \quad
+\Gamma = \frac{\Omega_e^2}{\gamma},
+    \end{aligned}
+\end{align}\]</span> 其中，<span class="math inline">\(\gamma \gg
+\Omega_e \gg \Gamma\)</span>确保了态<span class="math inline">\(\left| 2
+\right\rangle\)</span>的绝热消去。</p>
+<p>接下来，我们对三束729 nm激光进行讨论：我们设<span
+class="math inline">\(\phi_1 = \phi_2 = 0\)</span>，<span
+class="math inline">\(\delta_L^1 = -\delta_L^2 =
+-\omega_e\)</span>，<span class="math inline">\(\phi_3 =
+\frac{\pi}{2}\)</span>，<span class="math inline">\(\delta_L^3 =
+-2\omega_e\)</span>。与第一束激光脉冲相关的哈密顿量为： <span
+class="math display">\[\begin{align}
+    H_{\mathrm{eff}1}^{(1)} =  \frac{\Omega
+_1}{2}\mathrm{sin}[\eta(a\mathrm{e}^{-i \omega_e t} + a^\dagger
+\mathrm{e}^{i \omega_e t})](\sigma_+\mathrm{e}^{i \omega_e  t}
++  \sigma_-\mathrm{e}^{-i \omega_e t}),
+\end{align}\]</span> 由于<span class="math inline">\(\Omega_1/2 \ll
+\omega_e\)</span>，我们可以展开正弦函数并忽略包含<span
+class="math inline">\(\mathrm{e}^{\pm2i\omega_e t}\)</span>、<span
+class="math inline">\(\mathrm{e}^{\pm3i\omega_e
+t}\)</span>等高频项，从而得到： <span
+class="math display">\[\begin{align}
+    \begin{aligned}
+        \mathrm{sin}[\eta(a\mathrm{e}^{-i \omega_e t} + a^\dagger
+\mathrm{e}^{i \omega_e t})] = &amp;\sum_{k =
+0}^\infty(-n)^k\frac{\eta^{2k+1}}{(2k)!} (a\mathrm{e}^{-i \omega_e t} +
+a^\dagger \mathrm{e}^{i \omega_e t})\\
+         = &amp; \widetilde{\eta}_1 (a\mathrm{e}^{-i \omega_e t} +
+a^\dagger \mathrm{e}^{i \omega_e t}),
+    \end{aligned}
+\end{align}\]</span> 其中<span class="math inline">\(n = a^\dagger
+a\)</span>。再次消除高频项，我们得到： <span
+class="math display">\[\begin{align}
+    H_{\mathrm{eff}}^{(1)} = \frac{\widetilde{\eta}_1
+\Omega_1}{2}(a\sigma_+ + a^\dagger \sigma_-).
+\end{align}\]</span></p>
+<p>在<span class="math inline">\(\Gamma \gg \widetilde{\eta}_1
+\Omega_1\)</span>的条件下，态<span class="math inline">\(\left| 1
+\right\rangle\)</span>可以进一步绝热消去，得到： <span
+class="math display">\[\begin{align}
+    H_{\mathrm{eff}1}^{(2)} = 0,\quad L_{\mathrm{eff}1}^{(2)} =
+-\frac{\widetilde{\eta}_1 \Omega_1}{\sqrt{\Gamma}}a \left | 0  \right
+\rangle \left \langle 0 \right |.
+\end{align}\]</span></p>
+<p>应用相同的方法，我们可以对另外两束729 nm激光脉冲进行操作，得到：
+<span class="math display">\[\begin{align}
+    &amp;H_{\mathrm{eff}2}^{(2)} = 0,\quad L_{\mathrm{eff}2}^{(2)} =
+-\frac{\widetilde{\eta}_2 \Omega_2}{\sqrt{\Gamma}} a^\dagger \left |
+0  \right \rangle \left \langle 0 \right |,\quad \\
+    &amp;H_{\mathrm{eff}3}^{(2)} = 0,\quad L_{\mathrm{eff}3}^{(2)} =
+-\frac{\widetilde{\eta}_3 \Omega_3}{\sqrt{\Gamma}} a^2 \left | 0  \right
+\rangle \left \langle 0 \right |,
+\end{align}\]</span> 其中，<span
+class="math inline">\(\widetilde{\eta}_2 =
+\widetilde{\eta}_1\)</span>，<span
+class="math inline">\(\widetilde{\eta}_3\)</span>为： <span
+class="math display">\[\begin{align}
+    \widetilde{\eta}_3 = \sum_{k = 1}^{\infty}(-n)^{k-1}
+\frac{2\eta^{2k}\Omega_3}{(k+1)!(k-1)!}.
+\end{align}\]</span> 通过对自旋空间求迹，得到： <span
+class="math display">\[\begin{align}\label{timecrystals}
+    \dot{\rho} = -i[H_a,\rho] + \kappa \mathcal{D}[a]\rho + g
+\mathcal{D}[a^\dagger]\rho + \lambda \mathcal{D}[a^2]\rho,
+\end{align}\]</span> 其中： <span
+class="math display">\[\begin{equation}
+    \left \{\begin{aligned}
+        &amp;H_a = -\Delta a^\dagger a + \varepsilon (a + a^\dagger),\\
+        &amp;\mathcal{D}[o]\rho = o\rho o^\dagger -(o^\dagger o \rho +
+\rho o^\dagger o)/2,\\
+        &amp;\kappa = \widetilde{\eta}_1^2 \Omega_1^2/\Gamma,\quad g =
+\widetilde{\eta}_2^2 \Omega_2^2/\Gamma,\quad \lambda =
+\widetilde{\eta}_3^2 \Omega_3^2/\Gamma.
+    \end{aligned}\right.
+\end{equation}\]</span></p>
 
                 
               </div>
@@ -285,7 +455,7 @@ class="math inline">\(^{40}\mathrm{Ca}^{+}\)</span>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>线性离子阱中的时间晶体</div>
+      <div>线性离子阱中的时间晶体 (1)</div>
       <div>http://example.com/2024/12/13/timecrystals/</div>
     </div>
     <div class="license-meta">
@@ -340,7 +510,7 @@ class="math inline">\(^{40}\mathrm{Ca}^{+}\)</span>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/12/13/tra2024Hunan/" title="2024湖南游记（长沙——凤凰古城——张家界）">
+                      <a href="/2024/10/16/tra2024Hunan/" title="2024湖南游记（长沙——凤凰古城——张家界）">
                         <span class="hidden-mobile">2024湖南游记（长沙——凤凰古城——张家界）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
